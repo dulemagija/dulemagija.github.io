@@ -58,7 +58,7 @@ h4,h3,h1,h2{
 	color:white;
 }
 .parallax1{
-	background:url(../pictures/2.jpg) repeat fixed 100%;
+	background:url( pictures/2.jpg ) repeat fixed 100%;
 }
 .parallax1-inner{
 
@@ -66,7 +66,7 @@ h4,h3,h1,h2{
 }
 
 .parallax2{
-	background:url(../pictures/3.jpg) no-repeat fixed 100%;
+	background:url( pictures/3.jpg ) no-repeat fixed 100%;
 	  background-position: center;
 	  background-size: 100%
 
