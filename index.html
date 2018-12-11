@@ -1,0 +1,300 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<head>  <link rel="stylesheet" type="text/css" href="style.css">
+	 <title>DK</title>  </head>
+<body >
+
+<section class="parallax1">
+   <div class="parallax1-inner">
+
+   <ul class="topnav" id="myTopnav">
+  <li><a href=index.html><img src=home.png width=45 height=45></a></li>
+    <li><a href=#about>About</a></li>
+   <li><a href=#gallery>Gallery</a></li>
+   <li><a href=#contact>Contact</a></li>
+
+
+  <li class="icon">
+    <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()"><img src=mobile.png width=45 height=45></a>
+  </li>
+</ul>
+<br><br>
+
+
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+
+<center><a class="ghost-button" href="projects.html">Projects</a></center>
+
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+</section>
+
+
+<div id=about><a name=about></a>
+<h3 align=center><br>Hi, I'm Dusan. I'm a front end web designer/developer and 3d visualiser, skilled in HTML, CSS and CMS integration. I create clean, professional, functional websites.
+I spend my days crafting websites and creating 3d models. I work for all size of companies from small local businesses right up to huge international brands.
+I'm constantly learning web technologies and other design related topics, currently playing around with Javascript and JQuery.
+My Design process always starts with a pencil and paper, scribbling ideas and concepts, thinking about the problem and the solution.
+
+Once I have an idea of what I want to achieve, I'll then sit down at my computer and start with wire frames and low level mockups. Then add the imagery, typography design and details.
+
+One of the things I love about my Job, is the great tools I get to work with every day, here are some of the tools I use in my work.</h3>
+</div>
+<center>
+
+
+      <form name="myform" action="">
+        If you want to help me with database,please enter your name <input type="text" name="customer"/>
+         <input type="button" value="Save" onclick="WriteCookie();"/>
+      </form>
+	  <script>
+
+            function WriteCookie()
+            {
+               if( document.myform.customer.value == "" ){
+                  alert("Enter some value!");
+                  return;
+               }
+               cookievalue= escape(document.myform.customer.value) + ";";
+               document.cookie="name=" + cookievalue;
+               alert("Thanks for your help" +" " + cookievalue );
+            }
+
+      </script>
+
+	  Enter your age
+
+<input id="demo" type="text">
+<button type="button" onclick="myFunction()">OK</button>
+<p id="message"></p>
+
+<script>
+function myFunction() {
+    var message, x;
+    message = document.getElementById("message");
+    message.innerHTML = "";
+    x = document.getElementById("demo").value;
+    try {
+        if(x == "")  throw "empty";
+        if(isNaN(x)) throw "You have to enter a number";
+        x = Number(x);
+        if(x < 6)    throw "You are too young";
+        if(x > 50)   throw "You are too old";
+		else throw "You are at best age";
+    }
+    catch(err) {
+        message.innerHTML = err;
+    }
+}
+</script>
+</center>
+
+ <a name=gallery>
+ <section class="parallax2">
+   <div class="parallax2-inner">
+
+   <div class="slideshow-container">
+
+        <div class="mySlides fade">
+       <img src="img1.jpg" style="width:100%">
+	   <div class="text">My graphic design</div>
+       </div>
+
+        <div class="mySlides fade">
+      <img src="img2.jpg" style="width:100%">
+	    <div class="text">My graphic design</div>
+        </div>
+
+        <div class="mySlides fade">
+       <img src="img3.jpg" style="width:100%">
+	     <div class="text">My graphic design</div>
+        </div>
+        <!-- Dugmici za prosli i sledeci -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+      <!-- Kuglice ispod, moze da se obrise da ne smeta-->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+    </div>
+</a>
+<script>
+      // Glavni slajder na stranici
+      // Pocinje od prvog slajda
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        // Uvodimo novu funkciju koja pokazuje indeks.
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        // trenutni indeks saljda
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        // Prikaz slajdova.
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+        }
+</script>
+
+</div>
+
+<center>
+<h3>Here you can choose what would you like me to do for you</h3>
+
+
+<input type=button value= "Website"
+onClick="alert('From 50€')">
+<br>
+Unique design
+Responsive pages
+SEO optimization, Gallery...<br>
+Contact form
+Multi language website
+Support and administration
+<br><br>
+<input type=button value= "Branding"
+onClick="alert('From 20€')">
+<br>
+Creating profile for social networks
+Social media administration
+Logo design<br>
+A flyer and price lists design
+Business card design
+Design of promotional material
+<br><br>
+<input type=button value= "Application"
+onClick="alert('From 300€')">
+<br>
+Web application
+Mobile application
+Database<br>
+CMS system
+Web portal or Web blog
+Web store
+<div>
+      <section id="contact" class="contact">
+        <div><a name=contact></a>
+
+          <div class="back">
+            <p>You can come to our office at any time,or send us mail.<br>
+          <div>
+             <h3>Location</h3>
+            Novi Sad,Oblacica Rada 8 <br>
+            </div>
+            <div>
+             <h3>Mobile</h3> +381 69 250 5997<br>
+            </div>
+            <div>
+             <h3>Email</h3> dule.magija97@gmail.com<br>
+            </div>
+          <p>If you have some questions feel free to contact me</p><br>
+          <!-- Otvara novi prozor, modal! -->
+          <button id="myBtn" class="button">Contact me</button><br/>
+          <!-- Pokretanje -->
+          <div id="myModal" class="modal">
+            <!-- Sadrzaj koji ce prikazati novi prozor -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>
+
+                <hr>
+                <div>
+                <form>
+                    Name<br><input type="text" placeholder="Your name"><br>
+                    Email<br><input type="text" placeholder="Your mail"><br>
+                    Message<br><textarea placeholder="Your message?"></textarea>
+                </form><br>
+
+                <a href="#"><button class="button2">Send</button></a>
+
+                </div>
+              </p>
+            </div>
+
+          </div>
+          </div>
+          </div>
+      </section>
+    </div>
+
+	<script>
+          //Modal
+          // Get the modal
+          var modal = document.getElementById('myModal');
+
+          // Get the button that opens the modal
+          var btn = document.getElementById("myBtn");
+
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+
+          // When the user clicks on the button, open the modal
+          btn.onclick = function() {
+              modal.style.display = "block";
+          }
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function() {
+              modal.style.display = "none";
+          }
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+    </script>
+
+<br><br><br><br><br><br>
+<a href=https://www.instagram.com/><img src=i.png width=50 height=50></a>&nbsp
+<a href=https://www.facebook.com/><img src=f.png width=50 height=50></a>&nbsp
+<a href=https://www.twitter.com/><img src=t.png width=50 height=50></a>&nbsp
+
+<a href=https://www.youtube.com/><img src=y.png width=50 height=50></a>
+<br><br><br><br>
+</center>
+</section>
+
+
+<div class="footer">
+        <center>
+
+            <p>Copyright &copy; Dusan Kuzmanovski 2018</p>
+
+        </center>
+    </div>
+	</body>
+</html>
