@@ -9,7 +9,7 @@ ul.topnav {
   background-color: transparent;
 }
 
-ul.topnav li {center}
+ul.topnav li {text-align: center}
 
 ul.topnav li a {
   display: inline-block;
@@ -98,7 +98,7 @@ h4,h3,h1,h2{
 
 #submit_button {
     width: 15em;  height: 2em;
-	font-size:100%
+	font-size:100%;
 	font-family: "Arial Black", Gadget, sans-serif;
 }
 img {
@@ -123,7 +123,7 @@ li {
 background-color: white;
 color:black;
  width: 15em;  height: 2em;
-	font-size:100%
+	font-size:100%;
 font-size: 16pt;
 
  margin:20px;
@@ -131,8 +131,6 @@ font-size: 16pt;
 
 input[type="text"]{
 background-color: white;
-
-opacity:20%;
  display:flex;
  width:25%;
  height: 40px;
@@ -290,7 +288,13 @@ background-color: white;
     color: white;
     background-color: transparent;
     letter-spacing: 2px;
-	position: bottom-fixed;
+	  position:fixed;
 
 
+}
+.centar{
+  text-align: center;
+}
+.forma{
+  text-align: center;
 }
